@@ -1,0 +1,139 @@
+@import url('/css/style.css');
+
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.form-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-left {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    display: none;
+}
+
+.icon-left i {
+    color: var(--verde);
+}
+
+input:focus:invalid ~ .msj::after {    
+    color: rgb(245, 71, 40);
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+
+input[type="text"]:focus:invalid ~ .msj::after {
+    content: 'Debe llenar este campo con más de 3 caracteres';
+}
+
+input[type="email"]:focus:invalid ~ .msj::after {
+    content: 'Debe ingresar un email válido';
+}
+
+input[type="password"]:focus:invalid ~ .msj::after {
+    content: 'Debe ingresar una contraseña con más de 6 caracteres';
+}
+
+input:valid + .icon-left {
+    display: block;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+form.register-form input {
+    border: none;
+    padding: 7px;
+    margin: 1rem;
+}
+
+.title-label label {
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.type-profile {
+    margin: 0.5rem 1rem;
+}
+
+.interest-box-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0.8rem 1rem;
+}
+
+.box-interest {
+    display: flex;
+    align-items: center;
+}
+
+.button-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;    
+}
+
+.button-submit a {
+    width: 100%;
+    text-decoration: none;
+}
+
+.button-submit button {
+    padding: 0.7rem;
+    border: none;
+    box-shadow: 0px 0px 5px rgb(100, 100, 100);
+    width: 100%;
+    cursor: pointer;
+    background-color: var(--celeste);
+    color: #fff;
+}
+
+.borrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+button.borrar {
+    padding: 0.7rem;
+    border: none;
+    box-shadow: 0px 0px 5px rgb(100, 100, 100);
+    width: 100%;
+    cursor: pointer;
+    background-color: var(--gris-oscuro);
+    color: #fff;
+}
+
+@media screen and (min-width: 769px){
+    .register-form {
+        width: 70%;
+    }
+
+    .button-submit button {
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    button.borrar {
+        width: 30%;
+        margin:  0 auto;
+    }
+
+}

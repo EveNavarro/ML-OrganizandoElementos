@@ -1,0 +1,94 @@
+@import url('/css/style.css');
+
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.form-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-left {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    display: none;
+}
+
+.icon-left i {
+    color: var(--verde);
+}
+
+input:focus:invalid ~ .msj::after {    
+    color: rgb(245, 71, 40);
+    position: absolute;
+    top: 65px;
+    left: 30px;
+}
+
+input[type="text"]:focus:invalid ~ .msj::after {
+    content: 'Debe llenar este campo con más de 3 caracteres';
+}
+
+input[type="password"]:focus:invalid ~ .msj::after {
+    content: 'Debes ingresar una contraseña';
+}
+
+input:valid + .icon-left {
+    display: block;
+}
+
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.login-form input {
+    border: none;
+    padding: 15px;
+    margin: 1rem;
+}
+
+.button-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;    
+}
+
+.button-submit a {
+    text-decoration: none;
+}
+
+.button-submit button {
+    padding: 0.7rem;
+    border: none;
+    box-shadow: 0px 0px 5px rgb(100, 100, 100);
+    width: 100%;
+    cursor: pointer;
+    background-color: var(--celeste);
+    color: #fff;
+    transition: all .5s ease;
+}
+
+.button-submit button:hover {
+    background-color: #0022AA;
+}
+
+@media screen and (min-width: 769px){
+    .login-form {
+        width: 70%;
+    }
+
+    .button-submit a {
+        width: 70%;
+    }
+}
