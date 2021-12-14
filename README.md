@@ -1,4 +1,4 @@
-# MercadoLiebre 6 - Organizando y Animando Elementos [Pdf](https://github.com/EveNavarro/mercadoLiebre6-OrgYAnim/blob/master/Ejercitacion%20pdf/pdf-%20Organizando%20Elementos.pdf)
+# MercadoLiebre 6 :pushpin: - Organizando y Animando Elementos [Pdf](https://github.com/EveNavarro/mercadoLiebre6-OrgYAnim/blob/master/Ejercitacion%20pdf/pdf-%20Organizando%20Elementos.pdf)
 MÓDULO 4: Anatomía de un sitio web
 
 [MercadoLiebre 1 - Maquetado](https://github.com/EveNavarro/mercadoLiebre-Maquetado)
